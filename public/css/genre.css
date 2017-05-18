@@ -1,0 +1,43 @@
+.genre {
+  background-color: #00596F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  padding: 2em;
+  height: 90vh;
+}
+
+.genre-pick {
+  font-family: 'Barrio', cursive;
+  color: #FFD759;
+  font-size: 4em;
+}
+
+.genre-btn-container {
+  display: flex;
+
+}
+
+.genre-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre-btn {
+  background-color: #FFA200;
+  margin: 0.5em;
+  width: 18%;
+  text-align: center;
+  font-size: 1.2em;
+  color: #002E77;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.genre-btn > p {
+  margin: 0.5em;
+}
+
+.genre-btn >
