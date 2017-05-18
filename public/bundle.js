@@ -9540,6 +9540,15 @@ var App = function App() {
     _react2.default.createElement(
       'div',
       null,
+      _react2.default.createElement(
+        'div',
+        { className: 'header' },
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Pick a Flick in Thirty Tics'
+        )
+      ),
       _react2.default.createElement(_Genre2.default, null)
     )
     // </Router>

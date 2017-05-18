@@ -3,15 +3,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: sans-serif;
-  padding: 2em;
-  height: 90vh;
+  font-family: 'Ubuntu', sans-serif;
+  height: 100vh;
+  margin: 0;
 }
 
 .genre-pick {
   font-family: 'Barrio', cursive;
-  color: #FFD759;
+  color: #EDFD00;
   font-size: 4em;
+  margin-top: 2em;
 }
 
 .genre-btn-container {
@@ -27,17 +28,15 @@
 
 .genre-btn {
   background-color: #FFA200;
-  margin: 0.5em;
+  margin: 0.7em;
   width: 18%;
   text-align: center;
   font-size: 1.2em;
-  color: #002E77;
+  color: #290037;
   border-radius: 15px;
   font-weight: bold;
 }
 
 .genre-btn > p {
-  margin: 0.5em;
+  margin: 0.7em;
 }
-
-.genre-btn >
