@@ -13,7 +13,7 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
-.final-movie-list {
+.final-movie {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
