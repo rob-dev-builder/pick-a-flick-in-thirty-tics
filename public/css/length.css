@@ -1,0 +1,84 @@
+/* Pick a length component styling */
+
+.length-Length {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0E0B16;
+}
+
+.subTitle-Length {
+  display: flex;
+  justify-content: center;
+  font-family: 'Audiowide', cursive;
+  color: #A239CA;
+  font-size: 3em;
+}
+
+.options-Length {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2.5em;
+  margin-bottom: 5em;
+}
+
+.box-Length {
+  margin: 1.5em;
+  height: 10em;
+  width: 15em;
+  background-color: #4717F6;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1em;
+
+}
+
+.box-Length > h3 {
+  color: #E7DFDD;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+}
+
+.box-Length > p {
+  color: #E7DFDD;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Home component styling */
+
+.home-Home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+  background-color: #EFEFEF;
+}
+
+.home-Home > h1 {
+  color: black;
+  font-size: 3.5em;
+  font-weight: 200;
+  word-spacing: 0.15em;
+  letter-spacing: 0.075em;
+}
+
+.home-Home > h3 {
+  color: #A9A9A9;
+  font-size: 1.5em;
+  background-color: #CAEBF2;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0;
+}
+
+.start-Home {
+  background-color: #FF3B3F;
+  border-radius: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 1em;
+  color: #EFEFEF;
+  margin-bottom: 2em;
+}
