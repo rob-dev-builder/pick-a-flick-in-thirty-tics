@@ -1,4 +1,5 @@
 import React from 'react'
+import Language from './Language'
 import Decades from './Decades'
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div>
       <h1>React development has begun!</h1>
       <Decades />
+
     </div>
   )
 }

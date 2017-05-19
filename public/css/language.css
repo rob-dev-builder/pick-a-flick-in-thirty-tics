@@ -2,55 +2,54 @@
   /*border: thin solid red;*/
 }
 
-.decades {
+.language {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background: #A9CCE3;
+  background: #D1F2EB;
   width: 100%;
 }
 
-.decades-heading {
+.language-heading {
   text-align: center;
   align-items: center;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Bad Script', cursive;
   font-size: 90px;
   color: #273746;
   width: 100%
 }
 
-.decades-heading > p {
+.language-heading > p {
   margin: 20px;
 }
 
-.decades-subheading {
+.language-subheading {
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
 }
 
-.decades-btn-container {
+.language-btn-container {
   display: flex;
   align-items: center;
   padding: 50px;
-  background: #273746;
+  background: #76D7C4;
 }
 
-.decade-btns {
-    background: #A9CCE3;
+.language-btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
 }
 
-.decade-btn {
-      background: #76D7C4;
+.language-btn {
+      background: AliceBlue;
       width: 20%;
       margin: 5%;
       text-align: center;
       font-family: sans-serif;
-      border-color: #273746;
-      border-width: 10px;
-      border-style: solid;
-      font-size: 30px;
+      align-items: center;
+      font-size: 40px;
+      color: purple;
+      border-radius: 100%;
+      font-family: 'Bad Script', cursive;
 }
