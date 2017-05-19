@@ -13,9 +13,11 @@ const LanguageBtn = (props) => {
 
 
   return (
-    <div className="language-btns">
-      {btnGenerator()}
-    </div>
+    <Link to="/q/q6">
+      <div className="language-btns">
+        {btnGenerator()}
+      </div>
+    </Link>
   )
 }
 
