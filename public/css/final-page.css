@@ -1,0 +1,46 @@
+.final-page {
+  height: 100vh;
+  margin: 0;
+  width: calc(100% - 130px);
+  position: relative;
+  left: 130px;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #E2E3D6;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.final-movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+}
+
+.final-title {
+  color: #5E5E5E;
+  font-size: 1.5em;
+}
+
+.final-movies {
+  border: 1px solid grey;
+  text-align: left;
+  padding: 1em;
+  width: 40%;
+  margin: 1em;
+}
+
+.final-movie-title {
+  margin: 0;
+}
+
+.start-again {
+  background-color: #BFB0CE;
+  color: #FFFFFF;
+  padding: 0 1em;
+  border-radius: 10px;
+  margin: 2em;
+}
