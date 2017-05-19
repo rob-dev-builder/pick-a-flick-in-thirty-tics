@@ -11,9 +11,11 @@ const RatingBtn = (props) => {
   }
 
   return (
-   <div className="ratings-btn-container">
-     {btnGenerator()}
-   </div>
+    <Link to="/q/q4">
+     <div className="ratings-btn-container">
+       {btnGenerator()}
+     </div>
+   </Link>
   )
 }
 export default RatingBtn
