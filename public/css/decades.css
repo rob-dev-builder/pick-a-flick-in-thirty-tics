@@ -1,0 +1,56 @@
+* {
+  /*border: thin solid red;*/
+}
+
+.decades {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #A9CCE3;
+  width: 100%;
+}
+
+.decades-heading {
+  text-align: center;
+  align-items: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 90px;
+  color: #273746;
+  width: 100%
+}
+
+.decades-heading > p {
+  margin: 20px;
+}
+
+.decades-subheading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+
+.decades-btn-container {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  background: #273746;
+}
+
+.decade-btns {
+    background: #A9CCE3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.decade-btn {
+      background: #76D7C4;
+      width: 20%;
+      margin: 5%;
+      text-align: center;
+      font-family: sans-serif;
+      border-color: #273746;
+      border-width: 10px;
+      border-style: solid;
+      font-size: 30px;
+}

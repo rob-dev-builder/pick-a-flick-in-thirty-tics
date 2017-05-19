@@ -1,0 +1,55 @@
+* {
+  /*border: thin solid red;*/
+}
+
+.language {
+  display: flex;
+  flex-direction: column;
+  background: #D1F2EB;
+  width: 100%;
+}
+
+.language-heading {
+  text-align: center;
+  align-items: center;
+  font-family: 'Bad Script', cursive;
+  font-size: 90px;
+  color: #273746;
+  width: 100%
+}
+
+.language-heading > p {
+  margin: 20px;
+}
+
+.language-subheading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+
+.language-btn-container {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  background: #76D7C4;
+}
+
+.language-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.language-btn {
+      background: AliceBlue;
+      width: 20%;
+      margin: 5%;
+      text-align: center;
+      font-family: sans-serif;
+      align-items: center;
+      font-size: 40px;
+      color: purple;
+      border-radius: 100%;
+      font-family: 'Bad Script', cursive;
+}
