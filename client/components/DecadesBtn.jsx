@@ -13,9 +13,11 @@ const DecadesBtn = (props) => {
 
 
   return (
+    <Link to="/q/q6">
     <div className="decade-btns">
       {btnGenerator()}
     </div>
+    </Link>
   )
 }
 
