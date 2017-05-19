@@ -1,0 +1,32 @@
+.Countdown > p{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 25px;
+}
+
+.ratings-btn-container{
+  background-color: #09224c;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rating-btn{
+  border-color: white;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  height: 120px;
+  margin: 30px;
+  display: inline-block;
+  background-color: #e8296f;
+  font-size: 24px;
+  padding: 10px;
+  font-family:monospace;
+}
+
+.ratings-heading{
+  font-size: 50px;
+  font-family:monospace;
+  text-align: center;
+}
