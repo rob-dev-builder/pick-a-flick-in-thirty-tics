@@ -19,4 +19,4 @@ const DecadesBtn = (props) => {
   )
 }
 
-export default DecadeBtn
+export default DecadesBtn
