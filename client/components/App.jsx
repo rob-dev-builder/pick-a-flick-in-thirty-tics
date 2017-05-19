@@ -10,7 +10,7 @@ const App = () => {
       <div>
         <HeaderLeftBar />
         {/* <h1>React development has begun!</h1>  */}
-        {/* <Route path='/1' component={Genre} /> */}
+        {/* <Route path='/home/q1' component={Genre} /> */}
         <Genre />
       </div>
     // </Router>
