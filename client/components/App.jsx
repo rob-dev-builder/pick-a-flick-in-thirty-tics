@@ -13,5 +13,3 @@ function App (props) {
 }
 
 export default App
-
-{/* <Route path={'/home/q1/q2:choice'} component= */}
