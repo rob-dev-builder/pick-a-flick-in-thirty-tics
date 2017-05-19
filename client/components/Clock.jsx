@@ -1,12 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 
 class Clock extends React.Component {
   constructor (props) {
     super(props)
     // this.state = {date: new Date()}
-    let second = 30
-    this.state = {seconds: second}
+    // let second = 30
+    this.state = {seconds: 30}
   }
 
   componentDidMount () {
@@ -22,7 +22,7 @@ class Clock extends React.Component {
 
   tick () {
     this.setState({
-      date: new Date()
+      seconds: Number(this.state.seconds - 1)
     })
   }
 
@@ -30,15 +30,15 @@ class Clock extends React.Component {
     return (
       <div>
         <h2>Ticks left:</h2>
-        <h2>{this.state.second}.</h2>
+        <h2>{this.state.seconds}</h2>
       </div>
     )
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-)
+// ReactDOM.render(
+//   <Clock />,
+//   document.getElementById('root')
+// )
 
-module.exports = Clock
+export default Clock
