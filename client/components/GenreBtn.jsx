@@ -7,7 +7,7 @@ const GenreBtn = (props) => {
   function btnGenerator () {
     return genreList.map((item, key) => {
       // return <Link to={props.url + '/' + key} key={key}>{item}</Link>
-      return <div className='genre-btn'><p key={key}>{item}</p></div>
+      return <Link to='/q/q2' className='genre-btn'><p key={key}>{item}</p></Link>
     })
   }
 

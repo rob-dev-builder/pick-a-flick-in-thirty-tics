@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 import FinalPageMovies from './FinalPageMovies'
 
 const FinalPage = () => {
@@ -14,7 +14,7 @@ const FinalPage = () => {
         <FinalPageMovies />
       </div>
       <div className="start-again">
-        <h2>Start again</h2>
+        <Link to='/'><h2>Start again</h2></Link>
       </div>
     </div>
   )
