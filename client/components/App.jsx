@@ -1,17 +1,9 @@
 import React from 'react'
 
-import Home from './Home.jsx'
-import PickALength from './PickALength.jsx'
-
-function App (props) {
+const App = () => {
   return (
-    <div>
-      <Home />
-      {/* <PickALength /> */}
-    </div>
+    <h1>React development has begun!</h1>
   )
 }
 
 export default App
-
-{/* <Route path={'/home/q1/q2:choice'} component= */}
