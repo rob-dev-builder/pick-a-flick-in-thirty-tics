@@ -10060,17 +10060,28 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Home = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Home.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _PickALength = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./PickALength.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _PickALength2 = _interopRequireDefault(_PickALength);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var App = function App() {
+function App(props) {
   return _react2.default.createElement(
-    'h1',
+    'div',
     null,
-    'React development has begun!'
+    _react2.default.createElement(_Home2.default, null)
   );
-};
+}
 
 exports.default = App;
+
+
+{/* <Route path={'/home/q1/q2:choice'} component= */}
 
 /***/ }),
 /* 95 */
