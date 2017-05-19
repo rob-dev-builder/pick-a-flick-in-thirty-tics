@@ -9528,11 +9528,17 @@ var _react = __webpack_require__(50);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _HeaderLeftBar = __webpack_require__(227);
+
+var _HeaderLeftBar2 = _interopRequireDefault(_HeaderLeftBar);
+
 var _Genre = __webpack_require__(183);
 
 var _Genre2 = _interopRequireDefault(_Genre);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import {HashRouter as Router, Route} from 'react-router-dom'
 
 var App = function App() {
   return (
@@ -9540,22 +9546,13 @@ var App = function App() {
     _react2.default.createElement(
       'div',
       null,
-      _react2.default.createElement(
-        'div',
-        { className: 'header' },
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Pick a Flick in Thirty Tics'
-        )
-      ),
+      _react2.default.createElement(_HeaderLeftBar2.default, null),
       _react2.default.createElement(_Genre2.default, null)
     )
     // </Router>
 
   );
 };
-// import {HashRouter as Router, Route} from 'react-router-dom'
 
 exports.default = App;
 
@@ -22145,7 +22142,7 @@ var _reactRouterDom = __webpack_require__(214);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var GenreBtn = function GenreBtn(props) {
-  var genreList = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Documentary', 'Drama', 'Family', 'Fantasy', 'Horror', 'Music', 'Musical', 'Romance', 'Sci-Fi', 'Thriller', 'War', 'Western'];
+  var genreList = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Documentary', 'Drama', 'Family', 'Fantasy', 'Horror', 'Musical', 'Romance', 'Sci-Fi', 'Thriller', 'Western'];
 
   function btnGenerator() {
     return genreList.map(function (item, key) {
@@ -25484,6 +25481,72 @@ var valueEqual = function valueEqual(a, b) {
 };
 
 exports.default = valueEqual;
+
+/***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(50);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var HeaderLeftBar = function HeaderLeftBar() {
+  return _react2.default.createElement(
+    "div",
+    { className: "header-left-bar" },
+    _react2.default.createElement(
+      "div",
+      { className: "header" },
+      _react2.default.createElement(
+        "h1",
+        null,
+        "Pick a Flick in Thirty Tics"
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "left-bar" },
+      _react2.default.createElement(
+        "div",
+        { className: "bar-block" },
+        _react2.default.createElement(
+          "h2",
+          null,
+          "Choice 1"
+        )
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: "bar-block" },
+        _react2.default.createElement(
+          "h2",
+          null,
+          "Choice 2"
+        )
+      ),
+      _react2.default.createElement(
+        "div",
+        { className: "bar-block" },
+        _react2.default.createElement(
+          "h2",
+          null,
+          "Choice 3"
+        )
+      )
+    )
+  );
+};
+
+exports.default = HeaderLeftBar;
 
 /***/ })
 /******/ ]);

@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const GenreBtn = (props) => {
-  const genreList = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Documentary', 'Drama', 'Family', 'Fantasy', 'Horror', 'Music', 'Musical', 'Romance', 'Sci-Fi', 'Thriller', 'War', 'Western']
+  const genreList = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Documentary', 'Drama', 'Family', 'Fantasy', 'Horror', 'Musical', 'Romance', 'Sci-Fi', 'Thriller', 'Western']
 
   function btnGenerator () {
     return genreList.map((item, key) => {

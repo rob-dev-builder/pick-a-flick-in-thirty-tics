@@ -6,6 +6,9 @@
   font-family: 'Ubuntu', sans-serif;
   height: 100vh;
   margin: 0;
+  width: calc(100% - 120px);
+  position: relative;
+  left: 120px;
 }
 
 .genre-pick {
