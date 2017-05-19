@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function IMDBscore (props) {
   return (
@@ -9,18 +10,26 @@ function IMDBscore (props) {
       </div>
 
       <div className='options-IMDBscore'>
-        <div className='box0-IMDBscore'>
-          <h3>Highly rated</h3>
-        </div>
-        <div className='box1-IMDBscore'>
-          <h3>Good</h3>
-        </div>
-        <div className='box2-IMDBscore'>
-          <h3>Mediocre</h3>
-        </div>
-        <div className='box3-IMDBscore'>
-          <h3>I want a terrible movie!</h3>
-        </div>
+        <Link to='/final'>
+          <div className='box0-IMDBscore'>
+            <h3>Highly rated</h3>
+          </div>
+        </Link>
+        <Link to='/final'>
+          <div className='box1-IMDBscore'>
+            <h3>Good</h3>
+          </div>
+        </Link>
+        <Link to='/final'>
+          <div className='box2-IMDBscore'>
+            <h3>Mediocre</h3>
+          </div>
+        </Link>
+        <Link to='/final'>
+          <div className='box3-IMDBscore'>
+            <h3>I want a terrible movie!</h3>
+          </div>
+        </Link>
       </div>
 
     </div>
