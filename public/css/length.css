@@ -1,3 +1,40 @@
+/* Home component styling */
+
+.home-Home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+  background-color: #EFEFEF;
+}
+
+.home-Home > h1 {
+  color: black;
+  font-size: 3.5em;
+  font-weight: 200;
+  word-spacing: 0.15em;
+  letter-spacing: 0.075em;
+}
+
+.home-Home > h3 {
+  color: #A9A9A9;
+  font-size: 1.5em;
+  background-color: #CAEBF2;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0;
+}
+
+.start-Home {
+  background-color: #FF3B3F;
+  border-radius: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 1em;
+  color: #EFEFEF;
+  margin-bottom: 2em;
+}
+
 /* Pick a length component styling */
 
 .length-Length {
@@ -46,39 +83,59 @@
   font-family: 'Raleway', sans-serif;
 }
 
-/* Home component styling */
-
-.home-Home {
+/* Pick an IMDB rating styling */
+.container-IMDBscore {
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: 'Raleway', sans-serif;
-  background-color: #EFEFEF;
+  color: white;
+  height: 30vh;
 }
 
-.home-Home > h1 {
+.question-IMDBscore {
+  display: flex;
   color: black;
-  font-size: 3.5em;
-  font-weight: 200;
-  word-spacing: 0.15em;
-  letter-spacing: 0.075em;
+  font-family: 'Francois One', sans-serif;
+  letter-spacing: 0.5em;
+  word-spacing: 0.75em;
+  font-size: 2em;
 }
 
-.home-Home > h3 {
-  color: #A9A9A9;
-  font-size: 1.5em;
-  background-color: #CAEBF2;
-  text-align: center;
-  padding: 0.5em;
-  margin: 0;
+.options-IMDBscore {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.start-Home {
-  background-color: #FF3B3F;
-  border-radius: 1em;
+.box0-IMDBscore {
+  background-color: #008F95;
+  border-radius: 2em;
   padding-left: 1em;
   padding-right: 1em;
-  margin: 1em;
-  color: #EFEFEF;
-  margin-bottom: 2em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+}
+.box1-IMDBscore {
+  background-color: #E98000;
+  border-radius: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+}
+.box2-IMDBscore {
+  background-color: #EB6E80;
+  border-radius: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+}
+.box3-IMDBscore {
+  background-color: #E24E42;
+  border-radius: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
 }
