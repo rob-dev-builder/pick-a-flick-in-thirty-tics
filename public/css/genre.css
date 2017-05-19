@@ -6,9 +6,9 @@
   font-family: 'Walter Turncoat', sans-serif;
   height: 100vh;
   margin: 0;
-  width: calc(100% - 120px);
+  width: calc(100% - 130px);
   position: relative;
-  left: 120px;
+  left: 130px;
 }
 
 .genre-pick {

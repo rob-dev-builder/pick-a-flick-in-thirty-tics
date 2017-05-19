@@ -27,5 +27,8 @@ body {
 }
 
 .bar-block {
+  background-color: #ffffff;
   text-align: center;
+  margin: 0.5em;
+  border-radius: 10px;
 }
