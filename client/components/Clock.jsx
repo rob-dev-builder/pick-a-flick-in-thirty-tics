@@ -27,7 +27,7 @@ class Clock extends React.Component {
   render () {
     return (
       <div className='Countdown'>
-        <p>Ticks left: {this.state.seconds}</p>
+        <p>Tics : {this.state.seconds}</p>
       </div>
     )
   }

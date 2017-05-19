@@ -1,9 +1,11 @@
 import React from 'react'
 import Clock from './Clock'
+import Rating from './ContentRating'
 
 const App = () => {
   return (
-    <div>    
+    <div>
+    <Rating />
     <Clock />
     </div>
   )
