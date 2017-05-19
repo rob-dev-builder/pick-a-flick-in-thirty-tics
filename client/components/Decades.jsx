@@ -4,14 +4,10 @@ import DecadesBtn from './DecadesBtn'
 
 const Decades = () => {
   return (
-    <div>
-      <p>This is the decades component</p>
-      <div className="Decades">
-        <div>
-          <h1 className="decades-pick">Pick a Decade!</h1>
-          <h2 class ="decades-subheading">Subheading goes here</h2>
+    <div className="decades">
+        <div className="decades-heading">
+          <p>Pick a Decade!</p>
         </div>
-      </div>
       <div className="decades-btn-container">
         <DecadesBtn />
       </div>
