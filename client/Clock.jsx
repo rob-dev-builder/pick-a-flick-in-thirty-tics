@@ -18,11 +18,12 @@ class Clock extends React.Component {
   }
 
   tick () {
-    if (this.state.seconds <= 1 || this.state.seconds === 0) {
+    this.setState({seconds: Number(this.state.seconds - 1)})
+    if (this.state.seconds === 0) {
       this.componentWillUnmount()
     }
-    this.setState({seconds: Number(this.state.seconds - 1)})
   }
+
 
   render () {
     return (

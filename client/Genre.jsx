@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Header from './HeaderLeftBar.jsx'
 import FinalPage from './FinalPage.jsx'
 
 class Questions extends React.Component {
@@ -38,33 +39,25 @@ class Questions extends React.Component {
       options: getQuestion(),
       result: null
     })
-
   }
 
   render () {
-    if (this.state.result) {
-      return (
-        <div>
-          <div className='left-bar'>
-            {this.state.answers.map(answer => {
-              return (
-                <div className='bar-block'><h2>{answer}</h2></div>
-              )
-            })}
-          </div>
-          <FinalPage result={this.state.result} reload={this.reload} />
+    return (
+      <div>
+        <Header />
+        <div className='left-bar'>
+          {this.state.answers.map(answer => {
+            return (
+              <div className='bar-block'><h2>{answer}</h2></div>
+            )
+          })}
         </div>
-      )
-    } else {
-      return (
-        <div>
-          <div className='left-bar'>
-            {this.state.answers.map(answer => {
-              return (
-                <div className='bar-block'><h2>{answer}</h2></div>
-              )
-            })}
-          </div>
+
+        {this.state.result !== null && (
+          <FinalPage result={this.state.result} reload={this.reload} />
+        )}
+
+        {this.state.result === null && (
           <div className='genre'>
             <div>
               <h1 className='genre-pick'>Pick a Genre</h1>
@@ -79,9 +72,10 @@ class Questions extends React.Component {
               })}
             </div>
           </div>
-        </div>
-      )
-    }
+        )}
+
+      </div>
+    )
   }
 }
 

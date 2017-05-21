@@ -11,7 +11,6 @@ function App (props) {
     <Router>
       <div>
         <Route exact path={'/'} component={Home} />
-        <Route path={'/go'} component={Header} />
         <Route path={'/go'} component={Question} />
       </div>
     </Router>
