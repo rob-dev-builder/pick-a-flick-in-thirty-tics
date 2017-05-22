@@ -21,9 +21,9 @@ class Clock extends React.Component {
     this.setState({seconds: Number(this.state.seconds - 1)})
     if (this.state.seconds === 0) {
       this.componentWillUnmount()
+      this.props.timeout()
     }
   }
-
 
   render () {
     return (

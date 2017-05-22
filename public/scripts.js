@@ -53,8 +53,12 @@ function getDecadesList () {
   let results = []
   remainingResults.sort((a, b) => a.title_year - b.title_year)
   remainingResults.forEach(x => {
-    if (!results.includes(Math.floor(x.title_year / 10) * 10)) {
-      results.push(Math.floor(x.title_year / 10) * 10)
+    let roundedYear = Math.floor(x.title_year / 10) * 10
+    if (roundedYear < 1960) {
+      roundedYear = 1960
+    }
+    if (!results.includes(roundedYear)) {
+      results.push(roundedYear)
     }
   })
   return results
@@ -95,7 +99,7 @@ function getKeywordList () {
 
 function getGenres () {
   const options = genres
-  questions.push({question: questions.length, options: options})
+  questions.push({question: questions.length, options: options, optionNames: options})
   return options
 }
 
@@ -109,26 +113,38 @@ function getLengths () {
       case 180: return 'Very Long (2.5hrs +)'
     }
   })
-  questions.push({question: questions.length, options: options, optionsNames: optionNames})
+  questions.push({question: questions.length, options: options, optionNames: optionNames})
   return optionNames
 }
 
 function getRatings () {
   const options = getRatingsList()
-  questions.push({question: questions.length, options: options})
+  questions.push({question: questions.length, options: options, optionNames: options})
   return options
 }
 
 function getDecades () {
-  console.log('hi')
-  const options = getDecadesList()
-  questions.push({question: questions.length, options: options})
-  return options
+  let options = getDecadesList()
+  options = options.sort()
+  const optionNames = options.map(x => {
+    switch (x) {
+      case 1960: return '1960 to 1969'
+      case 1970: return '1970 to 1979'
+      case 1980: return '1980 to 1989'
+      case 1990: return '1990 to 1999'
+      case 2000: return '2000 to 2009'
+      case 2010: return '2010 to 2019'
+      case 2020: return '2020 to 2029'
+      default: return 'older than 1960'
+    }
+  })
+  questions.push({question: questions.length, options: options, optionNames: optionNames})
+  return optionNames
 }
 
 function getLanguages () {
   const options = getLanguageList()
-  questions.push({question: questions.length, options: options})
+  questions.push({question: questions.length, options: options, optionNames: options})
   return options
 }
 
@@ -150,7 +166,7 @@ function getKeywords () {
   const keywords = getKeywordList()
   const options = keywords.map(x => x.keyword)
   const ids = keywords.map(x => x.id)
-  questions.push({question: questions.length, options: options, id: ids})
+  questions.push({question: questions.length, options: options, id: ids, optionNames: options})
   return options
 }
 
@@ -185,16 +201,20 @@ function display (arr) {
   mainDiv.appendChild(countDiv)
 }
 
-function getQuestion () {
+function getOptions () {
   switch (questionNum) {
-    case 0: return getGenres(0); break
-    case 3: return getRatings(1); break
-    case 2: return getDecades(2); break
-    case 1: return getLengths(3); break
-    case 4: return getLanguages(4); break
-    case 5: return getScores(5); break
-    case 6: return getKeywords(6); break;
+    case 0: return getGenres()
+    case 1: return getLengths()
+    case 2: return getDecades()
+    case 3: return getRatings()
+    case 4: return getLanguages()
+    case 5: return getScores()
+    case 6: return getKeywords()
   }
+}
+
+function getCategories () {
+  return ['Genre', 'Length', 'Decade', 'Content Rating', 'Language', 'IMDB Score', 'Keyword']
 }
 
 function updateRemaining () {
@@ -219,3 +239,5 @@ function isNotLast () {
   }
   return true
 }
+
+export {getCategories, getOptions, reset}

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 
 const FinalPage = (props) => {
   return (
@@ -17,7 +17,7 @@ const FinalPage = (props) => {
         <p className="final-rating">Content Rating: {props.result.content_rating}</p>
       </div>
       <div className="start-again" onClick={props.reload}>
-        <h2>Start again</h2>
+        <h2><Link to='/'>Start again</Link></h2>
       </div>
     </div>
   )

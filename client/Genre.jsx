@@ -8,12 +8,14 @@ class Questions extends React.Component {
     super(props)
     this.state = {
       question: 0,
-      options: getQuestion(),
+      options: getOptions(),
       answers: [],
-      result: null
+      result: null,
+      categories: getCategories()
     }
     this.reload = this.reload.bind(this)
     this.answerQuestion = this.answerQuestion.bind(this)
+    this.pickFromRemaining = this.pickFromRemaining.bind(this)
   }
 
   answerQuestion (id) {
@@ -24,19 +26,25 @@ class Questions extends React.Component {
       })
     } else {
       this.setState({
-        answers: this.state.answers.concat([questions[questionNum - 1].options[id]]),
+        answers: this.state.answers.concat([questions[questionNum - 1].optionNames[id]]),
         question: this.question + 1,
-        options: getQuestion()
+        options: getOptions()
       })
     }
   }
 
-  reload() {
+  pickFromRemaining() {
+    this.setState({
+      result: remainingResults[Math.floor(Math.random() * remainingResults.length)]
+    })
+  }
+
+  reload () {
     reset()
     this.setState({
       answers: [],
       question: 0,
-      options: getQuestion(),
+      options: getOptions(),
       result: null
     })
   }
@@ -44,23 +52,17 @@ class Questions extends React.Component {
   render () {
     return (
       <div>
-        <Header />
+        <Header timeout={this.pickFromRemaining} />
         <div className='left-bar'>
-          {this.state.answers.map(answer => {
-            return (
-              <div className='bar-block'><h2>{answer}</h2></div>
-            )
-          })}
+          {this.state.answers.map(answer => <div className='bar-block'><h2>{answer}</h2></div>)}
         </div>
 
-        {this.state.result !== null && (
-          <FinalPage result={this.state.result} reload={this.reload} />
-        )}
+        {this.state.result !== null && <FinalPage result={this.state.result} reload={this.reload} />}
 
         {this.state.result === null && (
           <div className='genre'>
             <div>
-              <h1 className='genre-pick'>Pick a Genre</h1>
+              <h1 className='genre-pick'>Pick a {this.state.categories[questionNum]}</h1>
             </div>
             <div className='genre-btn-container'>
               {this.state.options.map((option, id) => {
