@@ -2,7 +2,7 @@ var questionNum = 0
 var questions = []
 var remainingResults = data
 
-function reset() {
+function reseting() {
   questionNum = 0
   questions = []
   remainingResults = data
@@ -239,5 +239,3 @@ function isNotLast () {
   }
   return true
 }
-
-export {getCategories, getOptions, reset}

@@ -13,7 +13,7 @@ class Questions extends React.Component {
       result: null,
       categories: getCategories()
     }
-    this.reload = this.reload.bind(this)
+    this.reloading = this.reloading.bind(this)
     this.answerQuestion = this.answerQuestion.bind(this)
     this.pickFromRemaining = this.pickFromRemaining.bind(this)
   }
@@ -39,14 +39,16 @@ class Questions extends React.Component {
     })
   }
 
-  reload () {
-    reset()
+  reloading () {
+    reseting()
     this.setState({
       answers: [],
       question: 0,
-      options: getOptions(),
-      result: null
+      //options: getOptions(),
+      //result: null,
+      testy: 'hi'
     })
+    console.log('this is the state', this.state)
   }
 
   render () {
@@ -54,10 +56,10 @@ class Questions extends React.Component {
       <div>
         <Header timeout={this.pickFromRemaining} />
         <div className='left-bar'>
-          {this.state.answers.map(answer => <div className='bar-block'><h2>{answer}</h2></div>)}
+          {this.state.answers.map((answer, i) => <div className='bar-block' key={i}><h2>{answer}</h2></div>)}
         </div>
 
-        {this.state.result !== null && <FinalPage result={this.state.result} reload={this.reload} />}
+        {this.state.result !== null && <FinalPage result={this.state.result} reloading={this.reloading} />}
 
         {this.state.result === null && (
           <div className='genre'>
@@ -67,7 +69,7 @@ class Questions extends React.Component {
             <div className='genre-btn-container'>
               {this.state.options.map((option, id) => {
                 return (
-                  <div className='genre-btn' onClick={() => this.answerQuestion(id)}>
+                  <div key={id} className='genre-btn' onClick={() => this.answerQuestion(id)}>
                     <p>{option}</p>
                   </div>
                 )
